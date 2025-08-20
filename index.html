@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivina Quién - Clash Royale</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎯 Adivina Quién - Clash Royale</h1>
+            <p>Selecciona las características de tu carta para encontrar cuál es</p>
+        </header>
+
+        <div class="filters-section">
+            <div class="filter-group">
+                <h3>Filtros</h3>
+                <div class="filter-row">
+                    <label>Elixir:</label>
+                    <div class="filter-buttons" id="elixir-filters">
+                        <button class="filter-btn" data-elixir="1">1</button>
+                        <button class="filter-btn" data-elixir="2">2</button>
+                        <button class="filter-btn" data-elixir="3">3</button>
+                        <button class="filter-btn" data-elixir="4">4</button>
+                        <button class="filter-btn" data-elixir="5">5</button>
+                        <button class="filter-btn" data-elixir="6">6</button>
+                        <button class="filter-btn" data-elixir="7">7</button>
+                        <button class="filter-btn" data-elixir="8">8</button>
+                        <button class="filter-btn" data-elixir="9">9</button>
+                        <button class="filter-btn" data-elixir="10">10</button>
+                    </div>
+                </div>
+
+                <div class="filter-row">
+                    <label>Tipo:</label>
+                    <div class="filter-buttons" id="type-filters">
+                        <button class="filter-btn" data-type="Troop">Tropa</button>
+                        <button class="filter-btn" data-type="Building">Edificio</button>
+                        <button class="filter-btn" data-type="Spell">Hechizo</button>
+                    </div>
+                </div>
+
+                <div class="filter-row">
+                    <label>Rareza:</label>
+                    <div class="filter-buttons" id="rarity-filters">
+                        <button class="filter-btn" data-rarity="Common">Común</button>
+                        <button class="filter-btn" data-rarity="Rare">Rara</button>
+                        <button class="filter-btn" data-rarity="Epic">Épica</button>
+                        <button class="filter-btn" data-rarity="Legendary">Legendaria</button>
+                        <button class="filter-btn" data-rarity="Champion">Campeón</button>
+                    </div>
+                </div>
+
+                <div class="filter-row">
+                    <label>Evolución:</label>
+                    <div class="filter-buttons" id="evolution-filters">
+                        <button class="filter-btn" data-evolution="true">Sí</button>
+                        <button class="filter-btn" data-evolution="false">No</button>
+                    </div>
+                </div>
+
+
+
+                <div class="filter-actions">
+                    <button id="reset-filters" class="reset-btn">Limpiar Filtros</button>
+                    <button id="hide-selected" class="hide-btn">Limpiar Selección</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-section">
+            <div class="stat">
+                <span class="stat-number" id="total-cards">0</span>
+                <span class="stat-label">Cartas Totales</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" id="visible-cards">0</span>
+                <span class="stat-label">Cartas Visibles</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number" id="hidden-cards">0</span>
+                <span class="stat-label">Cartas Ocultas</span>
+            </div>
+        </div>
+
+        <div class="cards-container" id="cards-container">
+            <!-- Las cartas se cargarán dinámicamente aquí -->
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Cargando cartas de Clash Royale...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
