@@ -146,7 +146,7 @@ header p {
     margin-top: 25px;
 }
 
-.reset-btn, .hide-btn {
+.reset-btn, {
     padding: 12px 24px;
     border: none;
     border-radius: 25px;

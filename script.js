@@ -43,7 +43,6 @@ class ClashRoyaleGame {
 
         // Botones de acción
         document.getElementById('reset-filters').addEventListener('click', () => this.resetFilters());
-        document.getElementById('hide-selected').addEventListener('click', () => this.hideSelectedCards());
     }
 
     async loadCards() {
